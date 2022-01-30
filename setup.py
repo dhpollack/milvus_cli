@@ -16,14 +16,17 @@ setup(
     packages=find_namespace_packages(),
     include_package_data=True,
     install_requires=[
-        "Click==8.0.1",
-        "pymilvus==2.0.0rc8",
+        "typer==0.4.0",
+        "pydantic==1.9.0",
+        "pymilvus==2.0.0",
+        "rich==11.1.0",
+        "requests==2.27.1",
         "tabulate==0.8.9",
-        "requests==2.26.0",
     ],
     entry_points={
         "console_scripts": [
             "milvus_cli = milvus_cli.scripts.milvus_cli:runCliPrompt",
+            "milvus_cli2 = milvus_cli.scripts.milvus_cli2:runRepl",
         ],
     },
     python_requires=">=3.8",
